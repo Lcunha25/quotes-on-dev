@@ -1,0 +1,85 @@
+.quote-authors {
+    width: 100%;
+    margin-left: auto ;
+    margin-right: auto ;
+    h2, h3{
+        color: white;
+    }
+    ul {
+        padding: 0px;
+        margin: 0px;
+    }
+    .archive-list {
+        display: unset;
+        padding: 0 15px 0px 0; 
+        a {
+            text-decoration: none;
+            list-style: none;
+            padding: 2px;
+            color: #0c0;
+        }
+    }
+}
+.category {
+    width: 100%;
+    margin-left: auto ;
+    margin-right: auto ;
+    h2 {
+        color: white;
+    }
+    ul {
+        padding: 0px;
+        margin: 0px;
+    }
+    .archive-list {
+        display: unset;
+        padding: 0 15px 0px 0; 
+        a {
+            text-decoration: none;
+            list-style: none;
+            padding: 2px;
+            color: #0c0;
+        }
+    }
+}
+.archive-tags {
+    width: 100%;
+    margin-left: auto ;
+    margin-right: auto ;
+    h2 {
+        color: white;
+    }
+    ul {
+        padding: 0px;
+        margin: 0px;
+    }
+    .archive-list {
+        display: unset;
+        padding: 0 15px 0px 0; 
+        a {
+            text-decoration: none;
+            list-style: none;
+            padding: 2px;
+            color: #0c0;
+        }
+    }
+}
+
+// Categories:
+.number-pagination{
+    color: #0c0;
+    text-decoration: none;
+    .page-numbers{
+        color: #0c0;
+        text-decoration: none;
+    }
+    span {
+        color: #0c0;
+    }
+}
+
+.refresh {
+    border-bottom: dotted;
+    border-top: dotted;
+    border-width: 1px;
+}

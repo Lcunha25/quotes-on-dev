@@ -1,0 +1,39 @@
+// if not logged in type info...
+.front-page-quotes .login {
+    text-decoration: none;
+    color: #0c0;
+}
+// form after logged in
+.submit-quote {
+    padding-top: 40px;
+}
+.wrapping-text-submit {
+    display: flex;
+    align-items: center;
+    p {
+        padding: 0 20px 0px 0px;
+        font-size: 25px;
+        color: #0c0;
+    }
+}
+.wrapping-text-submit-quote {
+    p {
+        font-size: 25px;
+        color: #0c0;
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+    }
+}
+// submit button
+#button-submit-quote {
+    font-size: 18px;
+    text-decoration: none;
+    background-color: transparent;
+    box-shadow: none;
+    text-shadow: none;
+    color: #0c0;
+    padding: 15px 60px;
+    border: 2px solid #0c0;
+}

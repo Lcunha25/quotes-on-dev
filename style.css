@@ -221,6 +221,22 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: Exo Web;
+  src: url("../../project-05/assets/fonts/exo-light-webfont.ttf") format("truetype"); }
+
+@font-face {
+  font-family: Exo_Web_Italic_Light;
+  src: url("../../project-05/assets/fonts/exo-lightitalic-webfont.ttf") format("truetype"); }
+
+@font-face {
+  font-family: Exo_Web_Italic_Medium;
+  src: url("../../project-05/assets/fonts/exo-mediumitalic-webfont.ttf") format("truetype"); }
+
+@font-face {
+  font-family: Exo_Web_Medium;
+  src: url("../../project-05/assets/fontsexo-medium-webfont.ttf") format("truetype"); }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -229,10 +245,11 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #fff;
+  font-family: Exo Web;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-size: 16px; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -420,7 +437,6 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  display: block;
   float: left;
   width: 100%; }
   .main-navigation ul {
@@ -451,7 +467,6 @@ a {
     float: left;
     position: relative; }
   .main-navigation a {
-    display: block;
     text-decoration: none; }
 
 /* Small menu. */
@@ -483,6 +498,19 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.quotes-on-dev {
+  font-size: 6rem;
+  color: white;
+  text-align: center;
+  margin: 0 0 70px 0;
+  padding-top: 27px; }
+  .quotes-on-dev a {
+    text-decoration: none;
+    color: white; }
+  .quotes-on-dev span {
+    color: #00cc00;
+    font-style: italic; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -568,12 +596,70 @@ a {
   margin: 0 0 1.5rem; }
 
 body {
-  background-color: #222222; }
+  background-color: #222; }
 
-#page {
+#primary {
   max-width: 1080px;
   min-width: 1080px;
   margin: 0 135px; }
+
+.wrapping-text {
+  display: grid;
+  grid-template-columns: 120px 840px 120px;
+  grid-template-rows: 100%;
+  margin-bottom: 80px;
+  max-width: 1080px; }
+
+.buttom-align {
+  text-align: center; }
+
+.left-quotation i {
+  color: #0c0;
+  font-size: 100px;
+  position: absolute; }
+
+.right-quotation i {
+  color: #0c0;
+  font-size: 100px;
+  position: absolute; }
+
+.front-page-quotes {
+  max-width: 840px;
+  padding: 0 70px; }
+  .front-page-quotes p {
+    margin-top: 0px; }
+
+#site-navigation {
+  padding: 20px 0px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  #site-navigation p {
+    padding: 0 10px;
+    width: 300px;
+    margin: 0;
+    height: 30px; }
+
+#primary-menu {
+  list-style: none;
+  padding: 0 10px; }
+  #primary-menu li a {
+    text-decoration: none;
+    color: #0c0;
+    border-right: 1px solid white;
+    padding: 0 10px; }
+
+footer {
+  max-width: 1080px;
+  min-width: 1080px;
+  margin: 0 135px; }
+
+.front-page-quotes .entry-content p {
+  font-size: 18px; }
 
 /*--------------------------------------------------------------
 # Media
@@ -597,3 +683,136 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.quote-authors {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .quote-authors h2, .quote-authors h3 {
+    color: white; }
+  .quote-authors ul {
+    padding: 0px;
+    margin: 0px; }
+  .quote-authors .archive-list {
+    display: unset;
+    padding: 0 15px 0px 0; }
+    .quote-authors .archive-list a {
+      text-decoration: none;
+      list-style: none;
+      padding: 2px;
+      color: #0c0; }
+
+.category {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .category h2 {
+    color: white; }
+  .category ul {
+    padding: 0px;
+    margin: 0px; }
+  .category .archive-list {
+    display: unset;
+    padding: 0 15px 0px 0; }
+    .category .archive-list a {
+      text-decoration: none;
+      list-style: none;
+      padding: 2px;
+      color: #0c0; }
+
+.archive-tags {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .archive-tags h2 {
+    color: white; }
+  .archive-tags ul {
+    padding: 0px;
+    margin: 0px; }
+  .archive-tags .archive-list {
+    display: unset;
+    padding: 0 15px 0px 0; }
+    .archive-tags .archive-list a {
+      text-decoration: none;
+      list-style: none;
+      padding: 2px;
+      color: #0c0; }
+
+.number-pagination {
+  color: #0c0;
+  text-decoration: none; }
+  .number-pagination .page-numbers {
+    color: #0c0;
+    text-decoration: none; }
+  .number-pagination span {
+    color: #0c0; }
+
+.refresh {
+  border-bottom: dotted;
+  border-top: dotted;
+  border-width: 1px; }
+
+.front-page-quotes p {
+  color: white;
+  font-size: 2.5rem; }
+
+.front-page-quotes a {
+  color: white; }
+
+.author-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .author-wrapper h2 {
+    padding: 0 10px 0 0;
+    font-size: 1.25rem; }
+  .author-wrapper a {
+    text-decoration: none;
+    color: #0c0; }
+
+#refresh-quotes {
+  font-size: 18px;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  color: #0c0;
+  padding: 15px 60px;
+  border: 2px solid #0c0; }
+
+.front-page-quotes .login {
+  text-decoration: none;
+  color: #0c0; }
+
+.submit-quote {
+  padding-top: 40px; }
+
+.wrapping-text-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .wrapping-text-submit p {
+    padding: 0 20px 0px 0px;
+    font-size: 25px;
+    color: #0c0; }
+
+.wrapping-text-submit-quote p {
+  font-size: 25px;
+  color: #0c0; }
+  .wrapping-text-submit-quote p textarea {
+    width: 100%;
+    height: 100px; }
+
+#button-submit-quote {
+  font-size: 18px;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  color: #0c0;
+  padding: 15px 60px;
+  border: 2px solid #0c0; }

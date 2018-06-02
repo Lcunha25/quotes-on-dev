@@ -34,11 +34,77 @@
 
 // Website styling
 body {
-	background-color: #222222;
+	background-color: #222;
 }
 
-#page {
+#primary {
 	max-width: 1080px;
 	min-width: 1080px;
 	margin: 0 135px;
+}
+
+// Quotations and grid:
+.wrapping-text {
+	display: grid;
+	grid-template-columns: 120px 840px 120px;
+	grid-template-rows: 100%;
+	margin-bottom: 80px;
+	max-width: 1080px;
+}
+.buttom-align {
+	text-align: center;
+}
+.left-quotation i{
+	color: #0c0;
+	font-size: 100px;
+	position: absolute;
+}
+.right-quotation i{
+	color: #0c0;
+	font-size: 100px;
+	position: absolute;
+}
+.front-page-quotes {
+	max-width: 840px;
+	padding: 0 70px;
+	p {
+		margin-top: 0px;
+	}
+
+}
+
+// Nav buttom, footer
+#site-navigation {
+	padding: 20px 0px;
+	height: 70px;
+	display: flex;
+	justify-content: flex-end;
+	p {
+		padding: 0 10px;
+		width: 300px;
+		margin: 0;
+		height: 30px;
+	}
+}
+
+#primary-menu {
+	list-style: none;
+	padding: 0 10px;
+	li a{
+		text-decoration: none;
+		color: #0c0;
+		border-right: 1px solid white;
+		padding: 0 10px;
+	}
+}
+
+footer{
+max-width: 1080px;
+min-width: 1080px;
+margin: 0 135px;
+}
+
+// Submit a quotation specifics
+.front-page-quotes .entry-content p {
+	font-size: 18px;
 }

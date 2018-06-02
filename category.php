@@ -17,9 +17,10 @@
 			<i class="fas fa-quote-left"></i>
 		</div>
 		<div class="front-page-quotes">
+			<h1>Category:</h1>
 <!-- this needs to change. I need to change the loop so that it only shows whatever is available for the category -->
 			<?php include 'inc/function-loop.php'; 
-			displayPost('1');?>
+			archivePP('5');?>
 		</div>
 		<div class="right-quotation">
 			<i class="fas fa-quote-right"></i>

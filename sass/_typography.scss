@@ -7,10 +7,11 @@ button,
 input,
 select,
 textarea {
-	color: $color__text-main;
-	font-family: $font__main;
+	color: $color__background-body;
+	font-family: Exo Web;
 	font-size: 1rem;
 	line-height: $font__line-height-body;
+	font-size: $font_size_main;
 }
 
 /* Headings */
