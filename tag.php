@@ -19,7 +19,6 @@
 		<div class="category-page-quotes">
 			<?php include 'inc/function-loop.php'; 
 			getPost()?>
-<!-- loopt to display category -->
 		</div>
 		<div class="right-quotation">
 			<i class="fas fa-quote-right"></i>

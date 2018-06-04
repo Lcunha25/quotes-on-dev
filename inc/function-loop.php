@@ -44,7 +44,7 @@ function displayPost ($postPP){
 ?>
 
 <?php
-// function for "archive" page. Importing product picture with price and name.
+// function for "archive" page. Imports only title and url
     function productLoop(){
 	$args = array(
 		'post_type' => 'post',
@@ -136,7 +136,7 @@ function testTT2(){
 }
 // function used on "category.php" page with web function and pagination.
 function archivePP ($postPP){
-	$query = "&orderby=rand&posts_per_page=$postPP";
+	$query = "orderby=rand&posts_per_page=$postPP";
 
 	$newsPosts = new WP_Query($query);
 		if ( $newsPosts->have_posts() ) : 
@@ -165,4 +165,63 @@ function archivePP ($postPP){
 		endif; 
 }
 
+?>
+
+<?php 
+function getPost(){
+	if ( have_posts() ) : 
+
+				the_archive_title('<h1 class="page-title">', '</h1>');
+
+	while ( have_posts() ) : the_post();
+
+			echo "<div class='refresh'>";
+			echo "<p>" . the_content( 'template-parts' ) . "</p>";
+			echo "<div class='author-wrapper'>";
+			echo "<h2>" . get_the_title() . "</h2>";
+			echo testTT();
+			echo "</div>";
+			echo "</div>";
+
+		endwhile; 
+
+			qod_numbered_pagination();
+
+	else :
+
+			get_template_part( 'template-parts/content', 'none' );
+			
+		endif;
+
+			wp_reset_query();
+}
+?>
+
+<!-- This was a trial of loop to display the loop based on the category -->
+<?php 
+		// $categories = get_the_category();
+		// 	foreach($categories as $category){
+		// 		echo "<h1>Category: " . $category->name."</h1>";
+		// 	};
+		// 	$args=  array(
+		// 		'category_name' => $category->slug,
+		// 		'posts_per_page' => 5
+		// 	);
+		// 	query_posts($args);
+		// 	if ( have_posts() ) : while ( have_posts() ) : the_post();
+			
+		// 		echo "<div class='refresh'>";
+		// 		echo "<p>" . the_content( 'template-parts' ) . "</p>";
+		// 		echo "<div class='author-wrapper'>";
+		// 		echo "<h2>" . get_the_title() . "</h2>";
+		// 		echo testTT();
+		// 		echo "</div>";
+		// 		echo "</div>";
+
+		// 	endwhile; 
+
+		// 		qod_numbered_pagination();
+			
+		// 	endif;
+		// 	wp_reset_query();
 ?>

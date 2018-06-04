@@ -687,19 +687,22 @@ object {
   width: 100%;
   margin-left: auto;
   margin-right: auto; }
-  .quote-authors h2, .quote-authors h3 {
+  .quote-authors h1 h2 {
     color: white; }
   .quote-authors ul {
     padding: 0px;
     margin: 0px; }
   .quote-authors .archive-list {
-    display: unset;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     padding: 0 15px 0px 0; }
     .quote-authors .archive-list a {
       text-decoration: none;
       list-style: none;
       padding: 2px;
-      color: #0c0; }
+      color: #0c0;
+      font-size: 1.25rem; }
 
 .category {
   width: 100%;
@@ -711,13 +714,16 @@ object {
     padding: 0px;
     margin: 0px; }
   .category .archive-list {
-    display: unset;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     padding: 0 15px 0px 0; }
     .category .archive-list a {
       text-decoration: none;
       list-style: none;
       padding: 2px;
-      color: #0c0; }
+      color: #0c0;
+      font-size: 1.25rem; }
 
 .archive-tags {
   width: 100%;
@@ -729,13 +735,16 @@ object {
     padding: 0px;
     margin: 0px; }
   .archive-tags .archive-list {
-    display: unset;
-    padding: 0 15px 0px 0; }
+    padding: 0 15px 0px 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
     .archive-tags .archive-list a {
       text-decoration: none;
       list-style: none;
       padding: 2px;
-      color: #0c0; }
+      color: #0c0;
+      font-size: 1.25rem; }
 
 .number-pagination {
   color: #0c0;
@@ -746,10 +755,16 @@ object {
   .number-pagination span {
     color: #0c0; }
 
-.refresh {
-  border-bottom: dotted;
-  border-top: dotted;
-  border-width: 1px; }
+.category-page-quotes {
+  max-width: 840px;
+  padding: 0 70px; }
+  .category-page-quotes p {
+    margin-top: 0px;
+    font-size: 2.5rem; }
+  .category-page-quotes .refresh {
+    border-bottom: dotted;
+    border-top: dotted;
+    border-width: 1px; }
 
 .front-page-quotes p {
   color: white;

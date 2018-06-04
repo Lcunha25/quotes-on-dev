@@ -13,8 +13,8 @@ $('#refresh-quotes').on('click', function(event) {
       xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
     }
   }).done(function(response) {
-    // function to appende text with webpage or only as text. Also not to keep the comma when not needed.
-    var test = (function() {
+// function to appende text with webpage link or only as text. Also not to keep the comma when not needed.
+    var appendTxt = (function() {
       if (response[0]._qod_quote_source_url && response[0]._qod_quote_source) {
         return "<h2>" + "<a href=" + response[0]._qod_quote_source_url + ">, " + response[0]._qod_quote_source + "</a>" + "</h2>";  
       }
@@ -25,7 +25,7 @@ $('#refresh-quotes').on('click', function(event) {
         return;
       }
     });
-    // statement to grab what is being fetched from the database and play with the information.
+// statement to grab what is being fetched from the database and play with the information.
       history.pushState({
           id: 'homepage'
       }, 'title', response[0].slug);
@@ -34,10 +34,10 @@ $('#refresh-quotes').on('click', function(event) {
       $('.refresh').append(response[0].content.rendered);
       $('.refresh').append("<div class='author-wrapper'></div>");
       $('.author-wrapper').append("<h2>" + response[0].title.rendered + "</h2>");
-      $('.author-wrapper').append(test);
+      $('.author-wrapper').append(appendTxt);
      });
   });
-  // function to post new quotes to system.
+  // function to add new quotes to system.
   $('#button-submit-quote').on('click', function(event) {
     event.preventDefault();
 
@@ -51,7 +51,7 @@ $('#refresh-quotes').on('click', function(event) {
         content: data[1].value,
         _qod_quote_source: data[2].value,
         _qod_quote_source_url: data[3].value,
-        status: 'publish'
+        status: 'pending'
       },
       beforeSend: function(xhr) {
         xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);

@@ -16,8 +16,8 @@ get_header(); ?>
             </div>
             <div class="front-page-quotes">
             <div class="quote-authors">
-                <h2>Authors</h2>
-                <h3>Quote Authors</h3>
+                <h1>Archives</h1>
+                <h2>Quote Authors</h2>
                 <ul>
            		<?php include 'inc/function-loop.php'; 
                    productLoop();?>
