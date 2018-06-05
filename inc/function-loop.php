@@ -98,6 +98,9 @@ function displayDescription (){
 // "submit.php" Check if the person is logged in to submit new quote
 function logedIn() {
 	if (is_user_logged_in()) {
+		echo "<header class='entry-header'>";
+		echo "<h1 class='entry-title'>Submit a Quote</h1>";
+		echo "</header>";
 		echo "<div class='submit-quote'>";
 		echo "<form class='submit-quote-form'>";
 		echo "<div class='wrapping-text-submit'>";
@@ -116,6 +119,7 @@ function logedIn() {
 		echo "<button id='button-submit-quote'>Submit</button>";
 		echo "</div>";
 	} else {
+		get_template_part( 'template-parts/content', 'page' );
 		echo "<a class='login' href=" . wp_login_url( $redirect ) . ">Click here to login.</a>";
 	}
 }
@@ -172,6 +176,35 @@ function getPost(){
 	if ( have_posts() ) : 
 
 				the_archive_title('<h1 class="page-title">', '</h1>');
+
+	while ( have_posts() ) : the_post();
+
+			echo "<div class='refresh'>";
+			echo "<p>" . the_content( 'template-parts' ) . "</p>";
+			echo "<div class='author-wrapper'>";
+			echo "<h2>" . get_the_title() . "</h2>";
+			echo testTT();
+			echo "</div>";
+			echo "</div>";
+
+		endwhile; 
+
+			qod_numbered_pagination();
+
+	else :
+
+			get_template_part( 'template-parts/content', 'none' );
+			
+		endif;
+
+			wp_reset_query();
+}
+?>
+
+<?php 
+// "single.php" -  for archive we do not need to capture the archive title.
+function getPostPN(){
+	if ( have_posts() ) : 
 
 	while ( have_posts() ) : the_post();
 

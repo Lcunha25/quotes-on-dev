@@ -26,9 +26,7 @@ $('#refresh-quotes').on('click', function(event) {
       }
     });
 // statement to grab what is being fetched from the database and play with the information.
-      history.pushState({
-          id: 'homepage'
-      }, 'title', response[0].slug);
+      history.pushState(null, null, red_vars.get_url + '/' + response[0].slug + '/');
       $('.refresh p').remove();
       $('.author-wrapper').remove();
       $('.refresh').append(response[0].content.rendered);
@@ -42,7 +40,6 @@ $('#refresh-quotes').on('click', function(event) {
     event.preventDefault();
 
     var data = $('.submit-quote-form :input').serializeArray();
-    console.log(data);
     $.ajax({
       method: 'post',
       url: red_vars.rest_url + "wp/v2/posts",

@@ -16,7 +16,7 @@
 			</div>
 			<div class="front-page-quotes">
 			<?php include 'inc/function-loop.php'; 
-			getPost()?>
+			getPostPN()?>
 
 			<div class="buttom-align">
 				<button type="button" id="refresh-quotes">Show me Another!</button>

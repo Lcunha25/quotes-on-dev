@@ -22,7 +22,8 @@ function qod_scripts() {
   wp_localize_script( 'red_comments', 'red_vars', array(
     'rest_url' => esc_url_raw( rest_url() ),
     'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
-    'filter' => 'filter[orderby]=rand&filter[posts_per_page]=1'
+    'filter' => 'filter[orderby]=rand&filter[posts_per_page]=1',
+    'get_url' => esc_url_raw( get_site_url()),
   ));
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts');
