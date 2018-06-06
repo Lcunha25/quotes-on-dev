@@ -27,7 +27,7 @@ function displayPost ($postPP){
 				echo "<div class='refresh'>";
 				echo "<p>" . the_content( 'template-parts' ) . "</p>";
 				echo "<div class='author-wrapper'>";
-				echo "<h2>" . get_the_title() . "</h2>";
+				echo "<h2>" . "- " . get_the_title() . "</h2>";
 				echo testTT();
 				echo "</div>";
 				echo "</div>";
@@ -45,7 +45,7 @@ function displayPost ($postPP){
 
 <?php
 // function for "archive" page. Imports only title and url
-    function productLoop(){
+    function quotesLopp(){
 	$args = array(
 		'post_type' => 'post',
 		'posts_per_page' => -1,
@@ -153,7 +153,7 @@ function archivePP ($postPP){
 				echo "<div class='refresh'>";
 				echo "<p>" . the_content( 'template-parts' ) . "</p>";
 				echo "<div class='author-wrapper'>";
-				echo "<h2>" . get_the_title() . "</h2>";
+				echo "<h2>"  . "- " . get_the_title() . "</h2>";
 				echo testTT2();
 				echo "</div>";
 				echo "</div>";
@@ -182,7 +182,7 @@ function getPost(){
 			echo "<div class='refresh'>";
 			echo "<p>" . the_content( 'template-parts' ) . "</p>";
 			echo "<div class='author-wrapper'>";
-			echo "<h2>" . get_the_title() . "</h2>";
+			echo "<h2>"  . "- " . get_the_title() . "</h2>";
 			echo testTT();
 			echo "</div>";
 			echo "</div>";
@@ -211,7 +211,7 @@ function getPostPN(){
 			echo "<div class='refresh'>";
 			echo "<p>" . the_content( 'template-parts' ) . "</p>";
 			echo "<div class='author-wrapper'>";
-			echo "<h2>" . get_the_title() . "</h2>";
+			echo "<h2>"  . "- " . get_the_title() . "</h2>";
 			echo testTT();
 			echo "</div>";
 			echo "</div>";

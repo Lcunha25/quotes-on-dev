@@ -15,12 +15,12 @@ get_header(); ?>
                 <i class="fas fa-quote-left"></i>
             </div>
             <div class="front-page-quotes">
-            <div class="quote-authors">
+            <div class="category">
                 <h1>Archives</h1>
                 <h2>Quote Authors</h2>
                 <ul>
            		<?php include 'inc/function-loop.php'; 
-                   productLoop();?>
+                   quotesLopp();?>
                 </ul>
             </div>
             <!-- function to get category -->
@@ -38,7 +38,7 @@ get_header(); ?>
             </ul>
         </div>
         <!-- function to get tags -->
-        <div class="archive-tags">
+        <div class="category">
             <h2>Tags</h2>
             <ul>
             <?php

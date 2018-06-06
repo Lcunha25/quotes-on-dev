@@ -39,17 +39,42 @@ body {
 
 #primary {
 	max-width: 1080px;
-	margin: 0 135px;
+	min-width: 300px;
+}
+#page {
+	padding: 5px;
 }
 
 // Quotations and grid:
-
+.wrapping-text {
+	display: grid;
+	grid-template-rows: 100%;
+	margin-bottom: 80px;
+}
+.left-quotation {
+	display: none;
+	i{
+		color: #0c0;
+		font-size: 100px;
+		position: absolute;
+	
+	}
+}
+.right-quotation {
+	display: none;
+		i{
+		color: #0c0;
+		font-size: 100px;
+		position: absolute;
+	
+	}
+}
 
 // Nav buttom, footer
 #site-navigation {
 	padding: 20px 0px;
 	height: 70px;
-	display: flex;
+	display: block;
 	justify-content: flex-end;
 	p {
 		padding: 0 10px;
@@ -72,8 +97,6 @@ body {
 
 footer{
 max-width: 1080px;
-min-width: 1080px;
-margin: 0 135px;
 }
 
 // Submit a quotation specifics

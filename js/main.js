@@ -31,7 +31,7 @@ $('#refresh-quotes').on('click', function(event) {
       $('.author-wrapper').remove();
       $('.refresh').append(response[0].content.rendered);
       $('.refresh').append("<div class='author-wrapper'></div>");
-      $('.author-wrapper').append("<h2>" + response[0].title.rendered + "</h2>");
+      $('.author-wrapper').append("<h2>- " + response[0].title.rendered + "</h2>");
       $('.author-wrapper').append(appendTxt);
      });
   });

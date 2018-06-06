@@ -39,6 +39,68 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## All Archives Page
 	## Submit a Quote Page
 --------------------------------------------------------------*/
+@media only screen and (min-width: 620px) {
+  .quotes-on-dev {
+    font-size: 5rem !important;
+    margin: 0 0 40px 0; }
+  .front-page-quotes p {
+    font-size: 1.75rem !important; }
+  .category .archive-list a {
+    font-size: 1.25rem !important; }
+  .submit-quote {
+    padding-top: 20px !important; }
+  .category-page-quotes {
+    padding: 0 20px !important; }
+    .category-page-quotes p {
+      font-size: 1.75rem !important; }
+  #site-navigation {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important; } }
+
+@media only screen and (min-width: 1080px) {
+  #primary {
+    margin: 0 auto; }
+  .wrapping-text {
+    display: grid;
+    grid-template-columns: 120px 840px 120px !important;
+    max-width: 1080px; }
+  .buttom-align {
+    text-align: center; }
+  .left-quotation {
+    display: block !important; }
+  .right-quotation {
+    display: block !important; }
+  .front-page-quotes {
+    max-width: 840px;
+    padding: 0 50px; }
+    .front-page-quotes p {
+      margin-top: 0px; }
+  .front-page-quotes p {
+    color: white;
+    font-size: 2.5rem !important; }
+  .category .archive-list a {
+    font-size: 1.25rem !important; }
+  .quotes-on-dev {
+    margin: 0 0 70px 0;
+    font-size: 6rem !important;
+    text-align: center; }
+  .submit-quote {
+    padding-top: 40px !important; }
+  .category-page-quotes {
+    padding: 0 70px !important;
+    max-width: 840px; }
+    .category-page-quotes p {
+      font-size: 2.5rem !important; }
+  .main-navigation {
+    width: 100%; }
+  footer {
+    margin: 0 auto; }
+  #site-navigation {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important; } }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -437,10 +499,8 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  float: left;
-  width: 100%; }
+  float: left; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -500,10 +560,9 @@ a {
   width: 50%; }
 
 .quotes-on-dev {
-  font-size: 6rem;
+  font-size: 44px;
   color: white;
-  text-align: center;
-  margin: 0 0 70px 0;
+  margin: 0 0 30px 0;
   padding-top: 27px; }
   .quotes-on-dev a {
     text-decoration: none;
@@ -600,41 +659,34 @@ body {
 
 #primary {
   max-width: 1080px;
-  min-width: 1080px;
-  margin: 0 135px; }
+  min-width: 300px; }
+
+#page {
+  padding: 5px; }
 
 .wrapping-text {
   display: grid;
-  grid-template-columns: 120px 840px 120px;
   grid-template-rows: 100%;
-  margin-bottom: 80px;
-  max-width: 1080px; }
+  margin-bottom: 80px; }
 
-.buttom-align {
-  text-align: center; }
+.left-quotation {
+  display: none; }
+  .left-quotation i {
+    color: #0c0;
+    font-size: 100px;
+    position: absolute; }
 
-.left-quotation i {
-  color: #0c0;
-  font-size: 100px;
-  position: absolute; }
-
-.right-quotation i {
-  color: #0c0;
-  font-size: 100px;
-  position: absolute; }
-
-.front-page-quotes {
-  max-width: 840px;
-  padding: 0 70px; }
-  .front-page-quotes p {
-    margin-top: 0px; }
+.right-quotation {
+  display: none; }
+  .right-quotation i {
+    color: #0c0;
+    font-size: 100px;
+    position: absolute; }
 
 #site-navigation {
   padding: 20px 0px;
   height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
@@ -654,9 +706,7 @@ body {
     padding: 0 10px; }
 
 footer {
-  max-width: 1080px;
-  min-width: 1080px;
-  margin: 0 135px; }
+  max-width: 1080px; }
 
 .front-page-quotes .entry-content p {
   font-size: 18px; }
@@ -678,32 +728,41 @@ iframe,
 object {
   max-width: 100%; }
 
+.front-page-quotes p {
+  color: white;
+  font-size: 1.25rem; }
+
+.front-page-quotes a {
+  color: white; }
+
+.author-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px; }
+  .author-wrapper h2 {
+    padding: 0 10px 0 0;
+    font-size: 1.25rem; }
+  .author-wrapper a {
+    text-decoration: none;
+    color: #0c0; }
+
+#refresh-quotes {
+  font-size: 18px;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  color: #0c0;
+  padding: 15px 60px;
+  border: 2px solid #0c0; }
+
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
-.quote-authors {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  .quote-authors h1 h2 {
-    color: white; }
-  .quote-authors ul {
-    padding: 0px;
-    margin: 0px; }
-  .quote-authors .archive-list {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    padding: 0 15px 0px 0; }
-    .quote-authors .archive-list a {
-      text-decoration: none;
-      list-style: none;
-      padding: 2px;
-      color: #0c0;
-      font-size: 1.25rem; }
-
 .category {
   width: 100%;
   margin-left: auto;
@@ -723,28 +782,7 @@ object {
       list-style: none;
       padding: 2px;
       color: #0c0;
-      font-size: 1.25rem; }
-
-.archive-tags {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  .archive-tags h2 {
-    color: white; }
-  .archive-tags ul {
-    padding: 0px;
-    margin: 0px; }
-  .archive-tags .archive-list {
-    padding: 0 15px 0px 0;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex; }
-    .archive-tags .archive-list a {
-      text-decoration: none;
-      list-style: none;
-      padding: 2px;
-      color: #0c0;
-      font-size: 1.25rem; }
+      font-size: 1rem; }
 
 .number-pagination {
   color: #0c0;
@@ -756,51 +794,21 @@ object {
     color: #0c0; }
 
 .category-page-quotes {
-  max-width: 840px;
-  padding: 0 70px; }
+  padding: 0 5px; }
   .category-page-quotes p {
     margin-top: 0px;
-    font-size: 2.5rem; }
+    font-size: 1.25rem; }
   .category-page-quotes .refresh {
     border-bottom: dotted;
     border-top: dotted;
     border-width: 1px; }
-
-.front-page-quotes p {
-  color: white;
-  font-size: 2.5rem; }
-
-.front-page-quotes a {
-  color: white; }
-
-.author-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .author-wrapper h2 {
-    padding: 0 10px 0 0;
-    font-size: 1.25rem; }
-  .author-wrapper a {
-    text-decoration: none;
-    color: #0c0; }
-
-#refresh-quotes {
-  font-size: 18px;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  text-shadow: none;
-  color: #0c0;
-  padding: 15px 60px;
-  border: 2px solid #0c0; }
 
 .front-page-quotes .login {
   text-decoration: none;
   color: #0c0; }
 
 .submit-quote {
-  padding-top: 40px; }
+  padding-top: 0px; }
 
 .wrapping-text-submit {
   display: -webkit-box;

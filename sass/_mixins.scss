@@ -4,3 +4,106 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+// Tables
+@media only screen and (min-width: 620px) {
+
+	// adjust title(header)
+	.quotes-on-dev {
+		font-size: 5rem !important;
+		margin:0 0 40px 0;
+	}
+	// adjust sizes of text
+	.front-page-quotes {
+		p {
+			font-size: 1.75rem !important;
+		}
+	}
+	.category .archive-list a{
+		font-size: 1.25rem !important;
+	}
+	// submit quote page adjust distance between quote submission div and title
+	.submit-quote {
+		padding-top: 20px !important;
+	}
+	// category page adjusts
+	.category-page-quotes {
+		padding: 0 20px !important;
+		p {
+			font-size: 1.75rem !important;
+		}
+	}
+	// footer
+	#site-navigation {
+		display: flex !important;
+	}
+}
+
+// Desktop
+@media only screen and (min-width: 1080px) {
+	// Website structure
+	#primary {
+		margin: 0 auto;
+	}
+
+	// quotation text
+    .wrapping-text {
+        display: grid;
+        grid-template-columns: 120px 840px 120px !important;
+        max-width: 1080px;
+    }
+    .buttom-align {
+        text-align: center;
+    }
+    .left-quotation {
+			display: block !important;
+    }
+    .right-quotation {
+			display: block !important;
+    }
+    .front-page-quotes {
+        max-width: 840px;
+        padding: 0 50px;
+        p {
+            margin-top: 0px;
+        }
+    
+	}
+	// adjust sizes of text
+	.front-page-quotes {
+		p {
+			color: white;
+			font-size: 2.5rem !important;
+		}
+	}
+	.category .archive-list a{
+		font-size: 1.25rem !important;
+	}
+	// adjust title(header)
+	.quotes-on-dev {
+		margin:0 0 70px 0;
+		font-size: 6rem !important;
+		text-align: center;
+	}
+	// submit quote page adjust distance between quote submission div and title
+	.submit-quote {
+		padding-top: 40px !important;
+	}
+	// category page adjusts
+	.category-page-quotes {
+		padding: 0 70px !important;
+		max-width: 840px;
+		p {
+			font-size: 2.5rem !important;
+		}
+	}
+	// Adjust footer
+	.main-navigation {
+		width: 100%;
+	}
+	footer {
+		margin: 0 auto;
+	}
+	#site-navigation {
+		display: flex !important;
+	}
+}
