@@ -18,7 +18,7 @@
 		</div>
 		<div class="category-page-quotes">
 			<?php include 'inc/function-loop.php'; 
-			getPost()?>
+			getPost('5')?>
 		</div>
 		<div class="right-quotation">
 			<i class="fas fa-quote-right"></i>

@@ -33,7 +33,7 @@ get_header(); ?>
             foreach ($product_types as $product) {
                 $url = get_site_url() . '/index.php/' . 'category' .'/' . $product->slug;
                 echo "<li class='archive-list'><a href=$url>$product->name</a></li>";
-            } 
+            }
         ?>
             </ul>
         </div>

@@ -140,7 +140,15 @@ function testTT2(){
 }
 // function used on "category.php" page with web function and pagination.
 function archivePP ($postPP){
-	$query = "orderby=rand&posts_per_page=$postPP";
+
+	$post_id = get_the_ID(); // or use the post id if you already have it
+	$category_object = get_the_category($post_id);
+	$cat = $category_object[0]->cat_ID;
+
+	$query = array(
+		"posts_per_page" => "$postPP",
+		"cat" => "$cat",
+	);
 
 	$newsPosts = new WP_Query($query);
 		if ( $newsPosts->have_posts() ) : 
@@ -172,32 +180,40 @@ function archivePP ($postPP){
 ?>
 
 <?php 
-function getPost(){
-	if ( have_posts() ) : 
+// function used on tag.php to display tag according to button clickd and only 5 per page
+function getPost($postPP){
+	$post_id = get_the_ID(); // or use the post id if you already have it
+	$tag_object = get_the_tags($post_id);
+	$tag = ($tag_object[0]->name);
+	$query = array(
+		"posts_per_page" => "$postPP",
+		"tag" => "$tag",
+	);
+	$newsPosts = new WP_Query($query);
+	if ( $newsPosts->have_posts() ) : 
 
-				the_archive_title('<h1 class="page-title">', '</h1>');
+		if ( $newsPosts->is_home() && ! $newsPosts->is_front_page() ) : 
+		endif; 
 
-	while ( have_posts() ) : the_post();
-
+		/* Start the Loop */ 
+		while ( $newsPosts->have_posts() ) : $newsPosts->the_post(); 
 			echo "<div class='refresh'>";
 			echo "<p>" . the_content( 'template-parts' ) . "</p>";
 			echo "<div class='author-wrapper'>";
 			echo "<h2>"  . "- " . get_the_title() . "</h2>";
-			echo testTT();
+			echo testTT2();
 			echo "</div>";
 			echo "</div>";
-
+		
 		endwhile; 
+		
+		qod_numbered_pagination();
 
-			qod_numbered_pagination();
+	else : 
 
-	else :
+		get_template_part( 'template-parts/content', 'none' ); 
 
-			get_template_part( 'template-parts/content', 'none' );
-			
-		endif;
-
-			wp_reset_query();
+	endif; 
 }
 ?>
 
