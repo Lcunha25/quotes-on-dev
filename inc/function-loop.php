@@ -229,32 +229,3 @@ function getPostPN(){
 			wp_reset_query();
 }
 ?>
-
-<!-- This was a trial of loop to display the loop based on the category -->
-<?php 
-		// $categories = get_the_category();
-		// 	foreach($categories as $category){
-		// 		echo "<h1>Category: " . $category->name."</h1>";
-		// 	};
-		// 	$args=  array(
-		// 		'category_name' => $category->slug,
-		// 		'posts_per_page' => 5
-		// 	);
-		// 	query_posts($args);
-		// 	if ( have_posts() ) : while ( have_posts() ) : the_post();
-			
-		// 		echo "<div class='refresh'>";
-		// 		echo "<p>" . the_content( 'template-parts' ) . "</p>";
-		// 		echo "<div class='author-wrapper'>";
-		// 		echo "<h2>" . get_the_title() . "</h2>";
-		// 		echo testTT();
-		// 		echo "</div>";
-		// 		echo "</div>";
-
-		// 	endwhile; 
-
-		// 		qod_numbered_pagination();
-			
-		// 	endif;
-		// 	wp_reset_query();
-?>

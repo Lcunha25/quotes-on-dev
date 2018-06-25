@@ -285,19 +285,35 @@ th {
 --------------------------------------------------------------*/
 @font-face {
   font-family: Exo Web;
-  src: url("../../project-05/assets/fonts/exo-light-webfont.ttf") format("truetype"); }
+  src: url("../../project-05/assets/fonts/exo-light-webfont.ttf") format("truetype");
+  src: url("../../project-05/assets/fonts/Exo-Light.eot");
+  src: url("../../project-05/assets/fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../project-05/assets/fonts/Exo-Light.woff2") format("woff2"), url("../../project-05/assets/fonts/Exo-Light.woff") format("woff"), url("../../project-05/assets/fonts/Exo-Light.svg#Exo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
 
 @font-face {
   font-family: Exo_Web_Italic_Light;
-  src: url("../../project-05/assets/fonts/exo-lightitalic-webfont.ttf") format("truetype"); }
+  src: url("../../project-05/assets/fonts/exo-lightitalic-webfont.ttf") format("truetype");
+  src: url("../../project-05/assets/fonts/Exo-LightItalic.eot");
+  src: url("../../project-05/assets/fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../project-05/assets/fonts/Exo-LightItalic.woff2") format("woff2"), url("../../project-05/assets/fonts/Exo-LightItalic.woff") format("woff"), url("../../project-05/assets/fonts/Exo-LightItalic.svg#Exo-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
 
 @font-face {
   font-family: Exo_Web_Italic_Medium;
-  src: url("../../project-05/assets/fonts/exo-mediumitalic-webfont.ttf") format("truetype"); }
+  src: url("../../project-05/assets/fonts/exo-mediumitalic-webfont.ttf") format("truetype");
+  src: url("../../project-05/assets/fonts/Exo-MediumItalic.eot");
+  src: url("../../project-05/assets/fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../project-05/assets/fonts/Exo-MediumItalic.woff2") format("woff2"), url("../../project-05/assets/fonts/Exo-MediumItalic.woff") format("woff"), url("../../project-05/assets/fonts/Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
 
 @font-face {
   font-family: Exo_Web_Medium;
-  src: url("../../project-05/assets/fontsexo-medium-webfont.ttf") format("truetype"); }
+  src: url("../../project-05/assets/font/exo-medium-webfont.ttf") format("truetype");
+  src: url("../../project-05/assets/font/Exo-Medium.eot");
+  src: url("../../project-05/assets/font/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../project-05/assets/font/Exo-Medium.woff2") format("woff2"), url("../../project-05/assets/font/Exo-Medium.woff") format("woff"), url("../../project-05/assets/font/Exo-Medium.svg#Exo-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
 
 /*--------------------------------------------------------------
 # Typography
@@ -839,3 +855,11 @@ object {
   color: #0c0;
   padding: 15px 60px;
   border: 2px solid #0c0; }
+
+.page-content .search-form {
+  width: 300px; }
+  .page-content .search-form fieldset {
+    border-color: #222; }
+    .page-content .search-form fieldset label .search-field {
+      border-color: #0c0;
+      background-color: #222; }

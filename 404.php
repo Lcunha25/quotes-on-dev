@@ -6,15 +6,20 @@
  *
  * @package QOD_Starter_Theme
  */
-
-get_header(); ?>
+?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main" role="main">
+		<?php get_header(); ?>
+			
+			<section class="wrapping-text">
+					<div class="left-quotation">
+						<i class="fas fa-quote-left"></i>
+					</div>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
+					<h1 class="page-title"><?php echo esc_html( 'Oops!' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
@@ -23,6 +28,10 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
+				<div class="right-quotation">
+					<i class="fas fa-quote-right"></i>
+				</div>
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
