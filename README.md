@@ -1,3 +1,4 @@
+![](project-05/background-picture.png)
 # Quotes on Dev Starter
 
 A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
