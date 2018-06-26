@@ -5,7 +5,7 @@ The website is built with Wordpress, MySql, PHP, SCSS, CSS, HTML, Gulp and Javas
 # Loops
 The website is responsive to changes on the MySql database updates. The loops used on the shop, journal and blogpost tags will automatically catch updates made and fetch them to the page. Multiple loops have been used for specific porpuses.
 
-#Ajax
+# Ajax
 This website is built using ajax with hashing to deal with inputs to the database from the users. A logged in user can add new quotes to the website and it will be sent to the database on pending status. See form for ajax interaction.
 ![](project-05/ajax-interaction.png)
 
